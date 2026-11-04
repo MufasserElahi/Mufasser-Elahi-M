@@ -15,7 +15,7 @@ void main()
         return;
     }
 
-    fprintf(fp, "Expertise in C Programming");
+    fprintf(fp, "The C programming classes have been very informative and interesting. The teacher explains each concept clearly and uses practical examples that make programming easy to understand. I really appreciate the teacher’s patience, support, and dedication in helping us learn and improve our coding skills. Overall, it has been a great learning experience, and I look forward to learning more.");
 
     fclose(fp);
 
@@ -32,7 +32,7 @@ void main()
         return;
     }
 
-    fprintf(fp, "\nI am the good programmer");
+    fprintf(fp, "\nThank you for your guidance and for making learning C programming an enjoyable experience.");
 
     fclose(fp);
 
