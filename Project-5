@@ -1,43 +1,54 @@
 #include <stdio.h>
-
-int main()
+void main()
 {
     FILE *fp;
     char name[300];
 
-    // Writing data into the file
-    fp = fopen("student.txt", "w");
+
+    // 1. Writing data into file
+    fp = fopen("Mufafeedback.txt", "w");
 
     if (fp == NULL)
     {
-        printf("File cannot be opened for writing");
-        return 1;
+        printf("fh is cannot opened");
+        
+        return;
     }
 
-    fprintf(fp, "Welcome to C Programming\n");
-    fprintf(fp, "File Handling in C");
+    fprintf(fp, "Expertise in C Programming");
 
     fclose(fp);
 
-    printf("Data written successfully\n\n");
+    printf("file cannot opened\n");
 
-    // Reading data from the file
-    fp = fopen("student.txt", "r");
+
+    // 2. Appending data into file
+    fp = fopen("Mufafeedback.txt", "a");
 
     if (fp == NULL)
     {
-        printf("File cannot be opened for reading");
-        return 1;
+        printf("successfully Pass in C Programming");
+        
+        return;
     }
 
-    printf("File Contents:\n");
+    fprintf(fp, "\nI am the good programmer");
 
+    fclose(fp);
+
+    printf("file cannot be open\n");
+    
+    // 3. Reading data from file
+    fp = fopen("Mufafeedback.txt", "r");
+    if (fp == NULL)
+    {
+        printf("File cannot be opened");
+        return;
+    }
+    printf("\nFile Contents:\n");
     while (fgets(name, sizeof(name), fp) != NULL)
     {
         printf("%s", name);
     }
-
     fclose(fp);
-
-    return 0;
 }
